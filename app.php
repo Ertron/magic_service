@@ -31,7 +31,53 @@ $app->register(new \Silex\Provider\DoctrineServiceProvider(), array(
 
 
 $app->get('/', function() use ($app) {
-	$response = new Response('Thank you for your feedback!', 200);
+	$content = array(
+		'{
+                "id": "1",
+                "popup_id": "1",
+                "steps": [
+                    {
+                      "step_id": "1",
+                      "parameters": 10
+                    },
+                    {
+                      "step_id": "2",
+                      "parameters": 50
+                    }
+
+                ]
+        }',
+		'{
+                "id": "2",
+                "popup_id": "1",
+                "steps": [
+                    {
+                      "step_id": "1",
+                      "parameters": 20
+                    },
+                    {
+                      "step_id": "2",
+                      "parameters": 30
+                    }
+
+                ]
+        }',
+		'{
+                "id": "3",
+                "popup_id": "1",
+                "steps": [
+                    {
+                      "step_id": "1",
+                      "parameters": 10
+                    },
+                    {
+                      "step_id": "4",
+                      "parameters": 90
+                    }
+
+                ]
+        }');
+	$response = new Response($content[array_rand($content, 1)], 200);
 	$response->headers->set('Access-Control-Allow-Origin', '*');
 	$response->headers->set('Content-Type', 'application/json');
 	return $response;
