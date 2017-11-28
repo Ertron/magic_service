@@ -81,20 +81,8 @@ $app->get('/', function() use ($app) {
 	$response->headers->set('Access-Control-Allow-Origin', '*');
 	$response->headers->set('Content-Type', 'application/json');
 	return $response;
-	/*return $app->json('test');
-	return $app['twig']->render('index.twig', array());*/
+
 })->bind('index');
 
-/*$app->before(function(Request $request) use($app){
-	$adm = new api\Model\AdminPanelModel($app['db']);
-	$app['host_info.hostname'] = $request->getHost();
-	$app['host_info.is_registered'] = $adm->isSetAdminPanel($app['host_info.hostname']);
-	if($app['host_info.is_registered']){
-		$app['log'] = new LoggerService($adm->getAdminPanelIdByHostname($app['host_info.hostname']), $app['db']);
-	}
-	else{
-
-	}
-});*/
 
 $app->run();
