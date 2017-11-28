@@ -68,11 +68,11 @@ $app->get('/', function() use ($app) {
                 "steps": [
                     {
                       "step_id": "1",
-                      "parameters": 10
+                      "parameters": 80
                     },
                     {
-                      "step_id": "4",
-                      "parameters": 90
+                      "step_id": "3",
+                      "parameters": 0
                     }
 
                 ]
