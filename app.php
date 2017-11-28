@@ -76,6 +76,16 @@ $app->get('/', function() use ($app) {
                     }
 
                 ]
+        }',
+		'{
+                "id": "4",
+                "popup_id": "5",
+                "steps": [
+                    {
+                      "step_id": "1",
+                      "parameters": 60
+                    }
+                ]
         }');
 	$response = new Response($content[array_rand($content, 1)], 200);
 	$response->headers->set('Access-Control-Allow-Origin', '*');
