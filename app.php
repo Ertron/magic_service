@@ -33,57 +33,57 @@ $app->register(new \Silex\Provider\DoctrineServiceProvider(), array(
 $app->get('/', function() use ($app) {
 	$content = array(
 		'{
-                "id": "1",
+                "scenario_id": "1",
                 "popup_id": "1",
                 "steps": [
                     {
                       "step_id": "1",
-                      "parameters": 10
+                      "parameter": 10
                     },
                     {
                       "step_id": "2",
-                      "parameters": 50
+                      "parameter": 50
                     }
 
                 ]
         }',
 		'{
-                "id": "2",
+                "scenario_id": "2",
                 "popup_id": "1",
                 "steps": [
                     {
                       "step_id": "1",
-                      "parameters": 20
+                      "parameter": 20
                     },
                     {
                       "step_id": "2",
-                      "parameters": 30
+                      "parameter": 30
                     }
 
                 ]
         }',
 		'{
-                "id": "3",
+                "scenario_id": "3",
                 "popup_id": "1",
                 "steps": [
                     {
                       "step_id": "1",
-                      "parameters": 80
+                      "parameter": 80
                     },
                     {
                       "step_id": "3",
-                      "parameters": 0
+                      "parameter": 0
                     }
 
                 ]
         }',
 		'{
-                "id": "4",
+                "scenario_id": "4",
                 "popup_id": "5",
                 "steps": [
                     {
                       "step_id": "1",
-                      "parameters": 60
+                      "parameter": 60
                     }
                 ]
         }');
